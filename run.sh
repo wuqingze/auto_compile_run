@@ -1,5 +1,5 @@
 for f in $(ls | grep .c)
 do
-    when-changed $f "cc $f >> log; echo --------------$f >> log; ./a.out >> log" &
+    when-changed $f "cc $f >> log;echo "" >> log;  echo --------------$f >> log; ./a.out >> log; echo "" >> log" &
     echo $f
 done
